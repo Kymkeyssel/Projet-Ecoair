@@ -20,7 +20,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
               <div className="p-1.5 sm:p-2 rounded-lg">
-                <img src={logo} alt="Logo" className="h-5 w-5 sm:h-6 sm:w-6" />
+                <img src={logo} alt="Logo" className="h-7 w-7 sm:h-8 sm:w-8" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-green-300">
                 EcoAir
