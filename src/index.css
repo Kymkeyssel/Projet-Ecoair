@@ -1,0 +1,184 @@
+/* Animations personnalisées */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(0.95); }
+  80% { opacity: 1; transform: scale(1.03); }
+ 100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-slide-up {
+  animation: slide-up 0.8s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-pop-in {
+  animation: pop-in 0.5s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-scale-in {
+  animation: scale-in 0.3s cubic-bezier(0.4,0,0.2,1) both;
+}
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== Brand color variables (inspired from the logo) ===== */
+:root {
+  /* Greens from the leaf and rim */
+  --eco-green: #3aa033;    /* main green */
+  --eco-green-2: #7fc63a;  /* lighter green */
+  --eco-dark:  #1e6b2a;    /* darker green for headings */
+
+  /* River / satellite blue */
+  --eco-blue:  #4fb3e6;
+
+  /* Soil / field brown */
+  --eco-brown: #b66e3f;
+
+  /* Background & text */
+  --eco-bg:    #f7fbf6; /* very light off-white with green tint */
+  --eco-text:  #153b2a; /* deep green / near-black */
+}
+
+/* ===== Global base styles using the brand colors ===== */
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--eco-bg);
+  color: var(--eco-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Links */
+a {
+  color: var(--eco-dark);
+}
+
+a:hover {
+  color: var(--eco-green-2);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--eco-dark);
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, var(--eco-green) 0%, var(--eco-green-2) 100%);
+  color: white;
+}
+
+.navbar a {
+  color: rgba(255,255,255,0.95);
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--eco-dark);
+  color: #fff;
+}
+
+/* Buttons */
+.btn-eco {
+  background: var(--eco-green);
+  color: white;
+  border-radius: .375rem;
+  padding: .5rem 1rem;
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.btn-eco:hover {
+  background: var(--eco-green-2);
+}
+
+.btn-accent {
+  background: var(--eco-blue);
+  color: white;
+}
+
+/* Cards and panels */
+.card {
+  background: white;
+  border-radius: .5rem;
+  box-shadow: 0 6px 18px rgba(20,60,40,0.06);
+}
+
+/* Accent small elements (tags, badges) */
+.tag-eco {
+  background: linear-gradient(180deg, var(--eco-green-2), var(--eco-green));
+  color: white;
+  padding: .25rem .5rem;
+  border-radius: .375rem;
+  font-weight: 600;
+  font-size: .75rem;
+}
+
+/* Utility helpers to reuse brand colors with Tailwind-like classes */
+.bg-eco { background-color: var(--eco-green) !important; }
+.bg-eco-2 { background-color: var(--eco-green-2) !important; }
+.text-eco { color: var(--eco-green) !important; }
+.border-eco { border-color: var(--eco-green) !important; }
+
+/* ===== Google Translate small overrides (kept) ===== */
+.goog-logo-link { display: none !important; }
+.goog-te-gadget { color: transparent !important; }
+.goog-te-banner-frame { display: none !important; }
+#goog-gt-tt { display: none !important; }
+.goog-te-menu-value:hover { text-decoration: none !important; }
+.skiptranslate { display: none !important; }
+
+
+/* Styles pour Google Translate */
+.goog-logo-link {
+  display: none !important;
+}
+
+.goog-te-gadget {
+  color: transparent !important;
+}
+
+/* Cacher la barre de traduction en haut */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+#goog-gt-tt {
+  display: none !important;
+}
+
+.goog-te-menu-value:hover {
+  text-decoration: none !important;
+}
+
+body {
+  top: 0 !important;
+}

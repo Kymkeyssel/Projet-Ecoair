@@ -1,0 +1,167 @@
+// src/i18n.js
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
+
+i18n
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
+    fallbackLng: "fr",
+    debug: false,
+
+    resources: {
+      fr: {
+        translation: {
+          hello: "Bonjour",
+          welcome: "Bienvenue sur le site",
+          search_placeholder: "Rechercher...",
+          no_results: "Aucun résultat trouvé",
+          nav: {
+            home: "Accueil",
+            about: "À Propos",
+            organization: "Notre Organisation",
+            goals: "Objectifs",
+            missions: "Missions",
+            domains: "Domaines d'intervention",
+            strategic_axes: "Axes Stratégiques",
+            governance: "Gouvernance",
+            actions: "Actions & Services",
+            references: "Références",
+            team: "Équipes",
+            projects: "Projets",
+            partners: "Partenaires & Affiliations",
+            publications: "Publications",
+            contact: "Nous Contacter",
+          },
+        },
+      },
+      en: {
+        translation: {
+          hello: "Hello",
+          welcome: "Welcome to the website",
+          search_placeholder: "Search...",
+          no_results: "No results found",
+          nav: {
+            home: "Home",
+            about: "About Us",
+            organization: "Our Organization",
+            goals: "Objectives",
+            missions: "Missions",
+            domains: "Areas of Intervention",
+            strategic_axes: "Strategic Axes",
+            governance: "Governance",
+            actions: "Actions & Services",
+            references: "References",
+            team: "Teams",
+            projects: "Projects",
+            partners: "Partners & Affiliations",
+            publications: "Publications",
+            contact: "Contact Us",
+          },
+        },
+      },
+      de: {
+        translation: {
+          hello: "Hallo",
+          welcome: "Willkommen auf der Seite",
+          search_placeholder: "Suchen...",
+          no_results: "Keine Ergebnisse gefunden",
+          nav: {
+            home: "Startseite",
+            about: "Über Uns",
+            organization: "Unsere Organisation",
+            goals: "Ziele",
+            missions: "Missionen",
+            domains: "Einsatzbereiche",
+            strategic_axes: "Strategische Achsen",
+            governance: "Führung",
+            actions: "Aktionen und Dienste",
+            references: "Referenzen",
+            team: "Teams",
+            projects: "Projekte",
+            partners: "Partner & Zugehörigkeiten",
+            publications: "Veröffentlichungen",
+            contact: "Kontaktiere Uns",
+          },
+        },
+      },
+      es: {
+        translation: {
+          hello: "Hola",
+          welcome: "Bienvenido al sitio",
+          search_placeholder: "Buscar...",
+          no_results: "No se encontraron resultados",
+          nav: {
+            home: "Inicio",
+            about: "Sobre Nosotros",
+            organization: "Nuestra Organización",
+            goals: "Objetivos",
+            missions: "Misiones",
+            domains: "Áreas de Intervención",
+            strategic_axes: "Ejes Estratégicos",
+            governance: "Gobernanza",
+            actions: "Acciones y Servicios",
+            references: "Referencias",
+            team: "Equipos",
+            projects: "Proyectos",
+            partners: "Socios y Afiliaciones",
+            publications: "Publicaciones",
+            contact: "Contáctenos",
+          },
+        },
+      },
+      ja: {
+        translation: {
+          hello: "こんにちは",
+          welcome: "サイトへようこそ",
+          search_placeholder: "検索...",
+          no_results: "結果が見つかりません",
+          nav: {
+            home: "ホーム",
+            about: "私たちについて",
+            organization: "私たちの組織",
+            goals: "目標",
+            missions: "ミッション",
+            domains: "介入分野",
+            strategic_axes: "戦略的軸",
+            governance: "ガバナンス",
+            actions: "アクションとサービス",
+            references: "参照",
+            team: "チーム",
+            projects: "プロジェクト",
+            partners: "パートナーと提携",
+            publications: "出版物",
+            contact: "お問い合わせ",
+          },
+        },
+      },
+      zh: {
+        translation: {
+          hello: "你好",
+          welcome: "欢迎访问网站",
+          search_placeholder: "搜索...",
+          no_results: "未找到结果",
+          nav: {
+            home: "首页",
+            about: "关于我们",
+            organization: "我们的组织",
+            goals: "目标",
+            missions: "使命",
+            domains: "干预领域",
+            strategic_axes: "战略轴心",
+            governance: "治理",
+            actions: "行动与服务",
+            references: "参考",
+            team: "团队",
+            projects: "项目",
+            partners: "合作伙伴与隶属关系",
+            publications: "出版物",
+            contact: "联系我们",
+          },
+        },
+      },
+    },
+  });
+
+export default i18n;

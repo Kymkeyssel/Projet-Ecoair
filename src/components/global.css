@@ -1,0 +1,28 @@
+/* Styles pour cacher Google Translate Banner */
+.goog-te-banner-frame {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.goog-te-menu-frame {
+  z-index: 9999 !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+/* Cacher le sélecteur Google par défaut */
+.goog-te-combo {
+  display: none !important;
+}
+
+/* Corriger l'affichage des textes traduits */
+font[face="gfs_artemis"] {
+  font-family: inherit !important;
+}
+
+/* Style pour les liens traduits */
+a .skiptranslate {
+  display: none !important;
+}
