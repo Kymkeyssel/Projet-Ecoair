@@ -9,14 +9,15 @@ export default function Publication() {
   const [files, setFiles] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // 🔧 Configuration Drive
-  const FOLDER_ID = "15s8M4c9tOfdHkpoAT8tWwI0gF3m_Omsc";
-  const API_KEY = "AIzaSyA45rW5BUH7q435U6rC78gnSeYhB0wGI04";
+  // Configuration Drive
+
+  const FOLDER_ID = "1-w3sNpp3SKs6AMZ9q7oN-VVcwEV_g8XM";
+  const API_KEY = "AIzaSyBffb0puBfJ_fDgxaF4jVAv7YX4gkIZOto";
 
   useEffect(() => {
     async function fetchFiles() {
       try {
-        // 🔍 Récupérer tous les fichiers (PDF, images, vidéos)
+        // Récupérer tous les fichiers (PDF, images, vidéos)
         const url = `https://www.googleapis.com/drive/v3/files?q='${FOLDER_ID}'+in+parents+and+(mimeType contains 'application/pdf' or mimeType contains 'image/' or mimeType contains 'video/')&fields=files(id,name,mimeType,modifiedTime,webViewLink,webContentLink)&key=${API_KEY}`;
         const response = await fetch(url);
         const data = await response.json();
@@ -36,7 +37,7 @@ export default function Publication() {
 
     fetchFiles();
 
-    // 🔄 Rafraîchissement automatique toutes les 5 minutes
+    // Rafraîchissement automatique toutes les 5 minutes
     const interval = setInterval(fetchFiles, 300000);
     return () => clearInterval(interval);
   }, []);
