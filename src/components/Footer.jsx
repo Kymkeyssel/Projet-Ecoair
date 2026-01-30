@@ -19,7 +19,7 @@ export default function Footer() {
           {/* EcoAir description */}
           <div>
             <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
-              <div className="bg-green-600 p-1.5 sm:p-2 rounded-lg">
+              <div className="p-1.5 sm:p-2 rounded-lg">
                 <img src={logo} alt="Logo" className="h-5 w-5 sm:h-6 sm:w-6" />
               </div>
               <h3 className="text-lg sm:text-xl font-bold text-green-300">
