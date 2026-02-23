@@ -2,7 +2,14 @@ import { Leaf, Mail, MapPin, Phone } from "lucide-react";
 import FooterBG from "../asset/BG/FooterBG.jpeg";
 import logo from "../asset/logo/logo.png";
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
+  const quickLinks = [
+    { label: "Domaines d'intervention", target: "apropos/domaines" },
+    { label: "Nos Projets", target: "projets" },
+    { label: "Publications", target: "publications" },
+    { label: "Partenaires", target: "partenaires" },
+  ];
+
   return (
     <footer
       className="bg-gradient-to-r bg-gray-600 text-white rounded-ls bg-black/40 relative animate-fade-in animate-delay-200"
@@ -18,7 +25,10 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-10 animate-pop-in animate-delay-400">
           {/* EcoAir description */}
           <div>
-            <div className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4">
+            <div
+              className="flex items-center space-x-2 sm:space-x-3 mb-3 sm:mb-4 cursor-pointer"
+              onClick={() => onNavigate("accueil")}
+            >
               <div className="p-1.5 sm:p-2 rounded-lg">
                 <img src={logo} alt="Logo" className="h-7 w-7 sm:h-8 sm:w-8" />
               </div>
@@ -39,19 +49,14 @@ export default function Footer() {
               Liens Rapides
             </h4>
             <ul className="space-y-1.5 sm:space-y-2 text-xs sm:text-sm">
-              {[
-                "Domaines d'intervention",
-                "Nos Projets",
-                "Publications",
-                "Partenaires",
-              ].map((item, i) => (
+              {quickLinks.map((link, i) => (
                 <li key={i}>
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:text-green-400 transition-colors"
+                  <button
+                    onClick={() => onNavigate(link.target)}
+                    className="text-gray-300 hover:text-green-400 transition-colors text-left"
                   >
-                    {item}
-                  </a>
+                    {link.label}
+                  </button>
                 </li>
               ))}
             </ul>
