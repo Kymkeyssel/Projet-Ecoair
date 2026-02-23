@@ -367,21 +367,18 @@ export default function APropos({ scrollToSection }) {
                 icon: BookOpen,
                 color: "green",
                 title: "Recherche et Innovation",
-                desc: "Développement de solutions scientifiques innovantes adaptées aux enjeux locaux et régionaux.",
               },
               {
                 id: "axe-2",
                 icon: Sprout,
                 color: "amber",
                 title: "Gestion Durable des Ressources Naturelles",
-                desc: "Accompagnement dans la gestion durable des ressources naturelles pour les générations futures.",
               },
               {
                 id: "axe-3",
                 icon: Users,
                 color: "blue",
                 title: "Sensibilisation, Formation et Autonomisation",
-                desc: "Renforcement des capacités et autonomisation des communautés locales.",
               },
             ].map((axe) => {
               const Icon = axe.icon;

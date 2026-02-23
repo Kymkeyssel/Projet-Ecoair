@@ -31,8 +31,6 @@ import DrJoseph2 from "../asset/ImagesEquipe/Dr Joseph/JO1.jpeg";
 import DrJoseph3 from "../asset/ImagesEquipe/Dr Joseph/JO3.jpeg";
 import DrYemefack from "../asset/ImagesEquipe/Dr Yemefack/imgDrY1.jpeg";
 import Keyssel from "../asset/ImagesEquipe/YMELE Keyssel/kymimg1.jpeg";
-// import DrYemefack2 from "../asset/ImagesEquipe/Dr Yemefack/imgDrYemefack2.jpeg";
-// import DrYemefack3 from "../asset/ImagesEquipe/Dr Yemefack/imgDrYemefack3.jpeg";
 
 
 function App() {
