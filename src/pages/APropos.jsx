@@ -194,7 +194,7 @@ export default function APropos({ scrollToSection }) {
                 className={`space-y-3 mt-4 md:mt-0 ${expandedSections.atouts ? "block" : "hidden md:block"}`}
               >
                 {[
-                  "Grande expertise en consultances pour le développement",
+                  "Grande expertise des Membres en consultances pour le développement",
                   "Important réseau de partenaires scientifiques et techniques, nationaux et internationaux",
                   "Conduit des projets à moyens et à longs termes à forts impacts communautaires",
                   "Approches interdisciplinaires et innovantes",
@@ -510,8 +510,7 @@ export default function APropos({ scrollToSection }) {
                 icon: Mountain,
                 color: "amber",
                 items: [
-                  "Transformation des zones minières impactées",
-                  "Laboratoires de science et de durabilité",
+                  "Transformation des zones minières impactées en laboratoires de science et de durabilité",
                 ],
               },
               {

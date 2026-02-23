@@ -15,7 +15,7 @@ import {
 import { motion } from "framer-motion";
 import BanerImage from "../asset/BG/pexels-photo-371900.webp";
 import DrmomoImage from "../asset/ImagesEquipe/Dr MOMO/thumbnail_DSC_0433.jpg";
-import DrElida from "../asset/ImagesEquipe/Dr Elida/Dr Elida.jpg";
+import DrElida from "../asset/ImagesEquipe/Dr Elida/IMG_20200131_101535.jpg";
 import drmomo2 from "../asset/ImagesEquipe/Dr MOMO/thumbnail_DSC_0372.jpg";
 import drmomo3 from "../asset/ImagesEquipe/Dr MOMO/thumbnail_IMG_20200129_101529.jpg";
 import drelida2 from "../asset/ImagesEquipe/Dr Elida/IMG_20200130_172418.jpg";
@@ -23,6 +23,7 @@ import drelida3 from "../asset/ImagesEquipe/Dr Elida/thumbnail_S6.jpg";
 import Drdjoumessi from "../asset/ImagesEquipe/Mme Djoumessi/IMG-20220326-WA0000.jpg";
 import Drdjoumessi2 from "../asset/ImagesEquipe/Mme Djoumessi/IMG_20190525_161919_5.jpg";
 import Drdjoumessi3 from "../asset/ImagesEquipe/Mme Djoumessi/IMG_20190329_114414_8.jpg";
+import DrStephane from "../asset/ImagesEquipe/Dr Stephane/img1.jpeg"
 
 function App() {
   const [selectedMember, setSelectedMember] = useState(null);
@@ -36,7 +37,7 @@ function App() {
       name: "Dr Mathieu Momo Nouazi",
       role: "Chef d'equipe",
       description:
-        "Expert en pédologie et géomorphologie avec 15 ans d'expérience.",
+        "Science du sol et dynamique des paysages tropicaux",
       image: DrmomoImage,
       imageStyle: {
         scale: 1.05,
@@ -48,7 +49,7 @@ function App() {
         "Mathieu exerce à l'Institut de Recherches Géologiques et Minières (Yaoundé, Cameroun), organisme du Ministère de la Recherche Scientifique et de l'Innovation (MINRESI). Il est également Membre de l'Association Camerounaise des Géomorphologues (ACG), et du Panel Scientifique sur le Bassin du Congo (SPCB).",
       mission:
         "Sa mission au sein d'EcoAir s'adosse au programme « Sols, Biodiversité et usages », et plus précisément l'étude de la diversité et la dynamique des couvertures pédologiques au Cameroun. Depuis la défense de sa Thèse de Doctorat en 2016, Mathieu a piloté plusieurs projets de recherche avec des collaborations nationale, et internationales (CEREGE, IRD). Ses approches combinent observations de terrains, cartographies thématiques fines, modèles pédo-génétiques et statistiques pour élucider les héritages géologiques et paléoclimatiques. Ces héritages conditionnent la structure profonde des sols, la morphologie, la phyto-géographie des paysages tropicaux et sont un guide pour les usages et la protection des sols. ",
-      email: "mathieu@ecoair.org",
+      email: "mnouazi@ecoair-cm.org",
       phone: "+237 6XX XXX XXX",
       location: "Yaoundé, Cameroun",
     },
@@ -57,14 +58,13 @@ function App() {
       name: "Dr Elida Joelle Yemeli",
       role: "Coordonnatrice de Programme",
       description:
-        "Spécialiste en développement durable axé sur la gestion des ressources en eau.",
+        "Développement durable axé sur la gestion des ressources en eau.",
       image: DrElida,
       imageStyle: {
         scale: 1.05,
         objectPosition: "50% 70%",
       },
 
-      // gallery: [DrElida, drelida2, drelida3],
       gallery: [
         {
           src: DrElida,
@@ -86,15 +86,15 @@ function App() {
         "Élida Joëlle est spécialiste en développement durable axé sur la gestion des ressources en eau. ",
       mission:
         "Elle met son expertise scientifique au service de la gestion intégrée des ressources hydriques, de l’évaluation environnementale et de la planification durable des territoires. Elle possède une expérience internationale en analyse et gestion environnementale acquise au ministère des Affaires municipales et de l’Habitation du Québec (MAMH), où elle a contribué à la Stratégie québécoise d’économie d’eau potable. Au Cameroun, elle a coordonné au sein de l’ONG CECOSDA des projets axés sur l’énergie verte et la résilience climatique. Sa mission au sein du programme EcoAir Eau, assainissement et santé environnementale est de promouvoir une gestion durable et équitable des ressources hydriques à travers l’analyse des impacts, la planification participative et le développement de solutions innovantes favorisant la santé et le bien-être des communautés.",
-      email: "elida@ecoair.org",
+      email: "eyemele@ecoiar-cm.org",
       phone: "+237 6XX XXX XXX",
       location: "Yaoundé, Cameroun",
     },
     {
       id: 3,
-      name: "Mme Djoumessi Gladys",
+      name: "Dr Gladys Djoumessi",
       role: "Coordonnatrice de Programme",
-      description: "Spécialiste en sciences spatiales et gestion des paysages.",
+      description: "Sciences spatiales et gestion des paysages.",
       image: Drdjoumessi,
       imageStyle: {
         scale: 1.05,
@@ -106,7 +106,7 @@ function App() {
         "Gladys est spécialiste en sciences spatiales. Elle applique les outils de cartographie, systèmes d'information géographique (SIG) et de télédétection aux domaines de la foresterie, de la gestion des paysages et des ressources naturelles.",
       mission:
         "Son travail s'inscrit dans une approche intégrée visant à concilier la préservation des écosystèmes avec les besoins croissants des populations. Elle a travaillé au sein d'organisation internationale, notamment le Centre de Recherche Forestière Internationale et le Centre International de recherche en Agroforesterie (CIFOR-ICRAF). Sa mission au sein d'EcoAir s'adosse au programme « climat, forêt et résilience ». Ses travaux portent sur l'analyse multi-temporelle du territoire et l'identification des zones prioritaires pour la conservation.",
-      email: "gladys@ecoair.org",
+      email: "gguimkeu@ecoair-cm.org",
       phone: "+237 6XX XXX XXX",
       location: "Yaoundé, Cameroun",
     },
@@ -114,25 +114,25 @@ function App() {
       id: 4,
       name: "Dr Stéphane Momo Takoudjou",
       role: "Coordonnateur de Programme",
-      description: "--metier--",
+      description: "Ecologie tropicale et photogrametrie",
       image:
-        "https://images.pexels.com/photos/3184406/pexels-photo-3184406.jpeg?auto=compress&cs=tinysrgb&w=600",
+        DrStephane,
       gallery: [
-        "https://images.pexels.com/photos/3184406/pexels-photo-3184406.jpeg?auto=compress&cs=tinysrgb&w=600",
+        DrStephane,
         "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
         "https://images.pexels.com/photos/3184470/pexels-photo-3184470.jpeg?auto=compress&cs=tinysrgb&w=600",
       ],
-      fullBio: "--Bio--",
-      mission: "--mission--",
-      email: "stephane@ecoair.org",
+      fullBio: "Stéphane Momo Takoudjou est écologue forestier tropical spécialiste des dynamiques des écosystèmes. Il mobilise des approches quantitatives, la modélisation et des technologies avancées (LiDAR, SIG, analyses statistiques) pour l’étude de la biomasse, du carbone forestier et des interactions flore-environnement en Afrique centrale. Son expertise porte sur la quantification des stocks de carbone, la biométrie forestière et l’évaluation des services écosystémiques dans des paysages tropicaux complexes.Fort de plus d’une dizaine d’années d’expérience, Stéphane a travaillé avec des institutions de recherche internationales notamment CBI (Congo Basin Institute). Il a employé des approches intégrées visant à comprendre et mesurer les fonctions écologiques clés des forêts tropicales, en particulier leur rôle dans l’atténuation et l’adaptation au changement climatique, l’estimation de la biomasse aérienne, et la structure des peuplements forestiers, contribuant à l’amélioration des méthodes de suivi du carbone et de la résilience des écosystèmes forestiers.",
+      mission: "Au sein d’EcoAir, son engagement est adossé au programme « Climat, forêt & résilience ». Ses travaux associent les approches physiques aux enjeux socio-écologiques, aux stratégies territoriales de résilience climatique, et de protection des forêts en faveur des communautés locales.",
+      email: "takoudjoum@ecoair-cm.org",
       phone: "+237 6XX XXX XXX",
       location: "Yaoundé, Cameroun",
     },
     {
       id: 5,
       name: "Dr Yemefack Martin",
-      role: "Coordonnateur de Programme",
-      description: "--metier--",
+      role: "Conseiller",
+      description: "Science du sol et systemes d'utilisation des terres",
       image:
         "https://images.pexels.com/photos/3184406/pexels-photo-3184406.jpeg?auto=compress&cs=tinysrgb&w=600",
       gallery: [
@@ -140,9 +140,9 @@ function App() {
         "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
         "https://images.pexels.com/photos/3184470/pexels-photo-3184470.jpeg?auto=compress&cs=tinysrgb&w=600",
       ],
-      fullBio: "--Bio--",
-      mission: "--Mission--",
-      email: "martin@ecoair.org",
+      fullBio: "Martin Yemefack applique des approches quantitatives robustes et des outils de télédétection, SIG et modélisation numérique à l’étude de la dynamique des sols, des usages des terres et de leurs interactions avec les systèmes agricoles tropicaux. Martin a une longue expérience (plus de 25 ans) en recherche pour le développement, notamment à l’Institut de Recherches Agricoles pour le Développement (IRAD), et travaille comme visiting scientist à l’International Institute of Tropical Agriculture (IITA). Il a également occupé des fonctions de coordination de la recherche nationale au Ministère de la Recherche Scientifique et de l’Innovation du Cameroun, et Président de l’African Soil Science Society (ASSS).",
+      mission: "Sa mission au sein d’EcoAir s’adosse au programme « sols, biodiversité et usages ». Il vise à comprendre et quantifier les effets des pratiques agricoles et des changements d’usage des terres sur la qualité et l’évolution des sols en zones tropicales, afin d’orienter des stratégies de gestion durable des ressources naturelles et d’adaptation au changement climatique. Il contribue aussi à la dynamique du carbone organique et l’interaction entre pratiques agricoles et fertilité des terres. Au‑delà des sciences physiques, son travail intègre des dimensions socio‑écologiques, visant à reconnecter la compréhension des sols aux besoins des communautés rurales, contribuant ainsi à la préservation des écosystèmes et à l’amélioration des moyens de subsistance pour les générations futures.",
+      email: "yemefackm@ecoair-cm.org",
       phone: "+237 6XX XXX XXX",
       location: "Yaoundé, Cameroun",
     },
@@ -404,9 +404,9 @@ function App() {
                     </p>
 
                     <div className="flex gap-4 hidden md:block">
-                      <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full p-2 transition-colors mr-2">
+                      {/* <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full p-2 transition-colors mr-2">
                         <Facebook className="w-4 h-4 text-white hover:text-sky-400" />
-                      </button>
+                      </button> */}
                       <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full p-2 transition-colors">
                         <Linkedin className="w-4 h-4 text-white hover:text-sky-400" />
                       </button>
@@ -591,7 +591,7 @@ function App() {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-3">
+                  {/* <div className="flex items-start gap-3">
                     <Phone className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs text-gray-600">Téléphone</p>
@@ -599,7 +599,7 @@ function App() {
                         {selectedMember.phone}
                       </p>
                     </div>
-                  </div>
+                  </div> */}
 
                   <div className="flex items-start gap-3">
                     <MapPin className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
