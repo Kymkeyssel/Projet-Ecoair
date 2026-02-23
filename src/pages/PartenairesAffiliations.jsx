@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import BanerImage from "../asset/BG/pexels-photo-371900.webp";
 import LogoEcocaf from "../asset/Logo Partenaire/ecocaf.jpeg";
 import LogoMej from "../asset/Logo Partenaire/logo-mej.png";
-import LogoEcoAir from "../asset/logo/logo.png"; // Placeholder pour le 3ème
+import LogoShiftGeoServices from "../asset/Logo Partenaire/Shift.jpeg";
 
 export default function PartenairesAffiliations() {
   const { t } = useTranslation();
@@ -19,11 +19,12 @@ export default function PartenairesAffiliations() {
     },
     {
       id: 2,
-      name: "EcoAir & Vous",
-      logo: LogoEcoAir,
+      name: "Shift-GeoServices",
+      logo: LogoShiftGeoServices,
       delay: 0.8,
-      description: "Devenez partenaire !",
-      isCenter: true, // Pour un style spécifique si besoin
+      description: "Partenaire Shift-GeoServices",
+      isCenter: true,
+      link: "https://shift-geoservice.com",
     },
     {
       id: 3,
@@ -71,9 +72,6 @@ export default function PartenairesAffiliations() {
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-200 mb-4">
             {t("nav.partners", "Nos Partenaires")}
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-green-200">
-            {t("Ensemble pour une planète durable")}
-          </p>
         </div>
       </motion.section>
 
@@ -191,7 +189,7 @@ export default function PartenairesAffiliations() {
         <div className="mt-6 md:mt-2 text-center">
           <div className="inline-block bg-white/80 backdrop-blur-sm px-6 py-3 md:px-10 md:py-5 rounded-full shadow-lg border border-green-200 text-sm md:text-lg">
             <p className="text-green-800 font-medium">
-              Rejoignez notre mission pour un avenir vert
+              Rejoignez notre mission!!!
             </p>
           </div>
         </div>

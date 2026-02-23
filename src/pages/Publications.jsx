@@ -97,9 +97,6 @@ export default function Publication() {
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-200 mb-4">
             {t("Nos Publications")}
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-green-200">
-            {t("📍 Contenu synchronisé automatiquement avec le Drive")}
-          </p>
         </div>
       </motion.section>
 

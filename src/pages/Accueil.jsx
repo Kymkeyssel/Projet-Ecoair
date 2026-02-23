@@ -189,9 +189,7 @@ export default function Accueil({ onNavigate }) {
             </p>
           </h1>
           <p className="text-xs sm:text-sm lg:text-2xl md:text-3xl mb-10 leading-relaxed text-green-50 max-w-3xl mx-auto drop-shadow">
-            Association écologiste à but non lucratif et à vocation nationale
-            créée au Cameroun (Région du Centre) sous la Déclaration
-            N°002100/RDA/J06/SAAJP/BAPP du 22 octobre 2025.
+            Association écologiste à but non lucratif créée au Cameroun (Région du Centre) sous la Déclaration N°002100/RDA/J06/SAAJP/BAPP du 22 octobre 2025.
           </p>
 
           <div className="flex flex-nowrap gap-2 md:gap-4 justify-center w-full px-2">

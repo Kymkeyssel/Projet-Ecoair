@@ -112,11 +112,7 @@ export default function APropos({ scrollToSection }) {
           <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-200 mb-4">
             À Propos d'EcoAir
           </h1>
-          <p className="text-sm sm:text-base md:text-lg text-green-200">
-            Une organisation dédiée à la transformation durable des écosystèmes
-            et au développement des communautés au Cameroun et dans le Bassin du
-            Congo.
-          </p>
+         
         </div>
       </motion.section>
 

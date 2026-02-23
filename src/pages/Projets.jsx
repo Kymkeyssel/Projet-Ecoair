@@ -5,20 +5,17 @@ import {
   ChevronRight,
   ArrowRight,
   X,
-  Users,
-  Tag,
   Target,
   Info,
   AlertTriangle,
   Clock,
   TrendingUp,
   Shield,
-  BarChart3,
   Globe,
-  Users as UsersIcon,
   Mountain,
   Home,
   Droplets,
+  Lightbulb,
 } from "lucide-react";
 import BanerImage from "../asset/BG/pexels-photo-371900.webp";
 import img1P1 from "../asset/Projet 1/APDC1776.JPG.jpeg";
@@ -45,32 +42,20 @@ export default function Projets() {
       description: "--petite description--",
       // Nouvelles sections Projet 1
       contexte:
-        "L’Afrique centrale concentre >30 % des métaux stratégiques pour la transition énergétique. Au Cameroun, >160 permis miniers ont été délivrés. Parallèlement, les autorisations d’exploitation artisanales de substances minérales ont explosé, avec 422 pour les seules Régions du Sud et de l’Est en 2016. Dans ce contexte, ≈95 % des sites restent artisanaux (EMAPE : Exploitation Minière Artisanale et à Petite Echelle), entraînant déforestation (>10 000 ha/an), pollution des sols et eaux, exposition de >300 000 personnes aux risques sanitaires, aux perturbations de la radioactivité naturelle des roches, et perte de patrimoine.La majorité des organisations se limitent à mesurer les impacts et proposer une meilleure gouvernance. REMIND va plus loin. Nous concilions science, solutions fondées sur la nature, et innovations pour améliorer la connaissance des gisements, réinventer l’extraction de l’or et des métaux critiques, et promouvoir une restauration guidée par les données de pointe.",
-      solutions: [
-        "Cartographie & modélisation avancées : compréhension précise des gisements et étude de la faisabilité environnementale de leur exploitation .",
-        "Suivi des flux métalliques dans les sols, eaux et chaînes trophiques : compréhension des perturbations anthropiques des échanges opérant à la zone critique (interface roche-sol), compréhension du fonctionnement biogéochimique des écosystèmes et des bassins versants .",
-        "Extraction minérale bio-inspirée : prototypes pilotes d’évaluation de la phyto-extraction, bio-sorption ou biométallurgie microbienne visant à réduire de >80 % l’usage des réactifs chimiques de concentration minérale.",
-        "Bio-extraction sur sites pollués : phyto-accumulation, pour dépolluer par production des biomasses métallifères .",
-        "Renforcement des capacités : chercheurs, institutions, communautés locales et artisans miniers formés à des pratiques guidées par la donnée .",
-      ],
-      resultatsAttendus: [
-        "Conformité environnementale pilotée sur ≥30 % des sites ciblés",
-        "Réduction mesurable des concentrations métalliques dans les interfaces sol-eau",
-        "Diminution de l’exposition humaine aux métaux lourds",
-        "Adoption de techniques innovantes d’extraction et de remédiation",
-      ],
-      impactsLongTerme: [
-        "Protection des écosystèmes critiques et des ressources en eau",
-        "Santé et bien-être des communautés améliorés",
-        "Gouvernance minière durable, transparente et participative",
-        "Contribution à la transition énergétique mondiale sans intensification des dommages écologiques",
+       "L’Afrique centrale concentre >30 % des métaux stratégiques pour la transition énergétique. Au Cameroun, >160 permis miniers ont été délivrés. Parallèlement, les autorisations d’exploitation artisanales de substances minérales ont explosé, avec 422 pour les seules Régions du Sud et de l’Est en 2016. Dans ce contexte, ~95 % des sites restent artisanaux (EMAPE : Exploitation Minière Artisanale et à Petite Echelle), entraînant déforestation (>10 000 ha/an), pollution des sols et eaux, exposition de >300 000 personnes aux risques sanitaires, aux perturbations de la radioactivité naturelle des roches, et perte de patrimoine. La majorité des organisations se limitent à mesurer les impacts et proposer une meilleure gouvernance. REMIND va plus loin. Nous concilions science, solutions fondées sur la nature, et innovations pour améliorer la connaissance des gisements, réinventer l’extraction de l’or et des métaux critiques, et promouvoir une restauration guidée par les données de pointe.",
+       solutions: [
+        "Cartographie & modélisation avancées : compréhension précise des gisements et étude de la rentabilité et de la faisabilité environnementale de leur exploitation",
+        "Suivi des flux métalliques dans les sols, eaux et chaînes trophiques : compréhension des perturbations anthropiques des échanges opérant à la zone critique (interface roche-sol), compréhension du fonctionnement biogéochimique des écosystèmes et des bassins versants",
+        "Extraction minérale bio-inspirée : prototypes pilotes d’évaluation de la phyto-extraction, visant à réduire de >80 % l’usage des réactifs chimiques de concentration minérale",
+        "Bio-remédiation sur sites pollués : phyto-accumulation, pour dépolluer par production des biomasses métallifères ",
+        "Renforcement des capacités : chercheurs, institutions, communautés locales et artisans miniers formés à des pratiques guidées par la donnée ",
       ],
       bonASavoir: [
         "REMIND n’est pas plateforme de recommandations. Nous fournissons des outils concrets, des solutions innovantes et des modèles exportables, transformant l’exploitation minière au Cameroun et inspirant une nouvelle norme pour l’Afrique centrale",
       ],
+      innovation: "REMIND n’est pas plateforme de recommandations. Nous fournissons des outils concrets, des solutions innovantes et des modèles exportables, transformant l’exploitation minière au Cameroun et inspirant une nouvelle norme pour l’Afrique centrale",
+      creditImage: ["Source : Ecoair"],
 
-      teamSize: "--nombre de memebres prenant part au projet--",
-      status: "--statut du projet--",
       images: [img1P1, img2P1, img3P1, img4P1],
       color: "from-blue-600 to-indigo-700",
       icon: Mountain,
@@ -100,8 +85,6 @@ export default function Projets() {
       ],
       creditImage: ["SDN/JC (Image 1)", "BBC News (Image 2)"],
 
-      teamSize: "--nombre de memebres prenant part au projet--",
-      status: "--statut du projet--",
       images: [img1P2, img2P2],
       color: "from-amber-600 to-orange-700",
       icon: AlertTriangle,
@@ -164,12 +147,9 @@ export default function Projets() {
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 px-2">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-5xl font-bold text-gray-100 mb-1 sm:mb-2 md:mb-4 text-center">
+          <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-5xl font-bold text-gray-100 mb-1 sm:mb-2 md:mb-4 text-center">
             Nos Projets
           </h1>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-green-100 max-w-2xl mx-auto text-center px-2">
-            Initiatives stratégiques pour un développement résilient et durable
-          </p>
         </div>
       </motion.section>
 
@@ -213,18 +193,13 @@ export default function Projets() {
                     <div className="bg-gradient-to-br from-gray-50 to-white rounded-xl sm:rounded-2xl md:rounded-3xl shadow-lg sm:shadow-xl md:shadow-2xl overflow-hidden">
                       <div className="flex flex-col md:grid md:grid-cols-2 min-h-[300px] sm:min-h-[350px] md:min-h-[500px] lg:min-h-[600px]">
                         {/* Left Side - Text Content */}
-                        <div className="p-3 sm:p-4 md:p-6 lg:p-12 flex flex-col justify-between order-2 md:order-1">
+                        <div className="p-3 sm:p-4 md:p-6 lg:p-12 flex flex-col justify-center gap-2 order-2 md:order-1">
                           {/* Project Number and Title */}
-                          <div className="mb-2 sm:mb-3">
+                          <div className="sm:mb-3">
                             <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-full border-2 border-green-500 mb-2 sm:mb-3">
                               <span className="text-base sm:text-lg md:text-xl font-bold text-green-600">
                                 {project.number}
                               </span>
-                            </div>
-                            <div className="mb-1 sm:mb-2">
-                              <p className="text-[10px] sm:text-xs text-gray-600 font-medium mb-1">
-                                {project.year} • {project.category}
-                              </p>
                             </div>
                             <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-green-700 mb-1 leading-tight">
                               {project.title}
@@ -233,11 +208,6 @@ export default function Projets() {
                               {project.subtitle}
                             </p>
                           </div>
-
-                          {/* Short Description */}
-                          <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3 flex-1">
-                            {project.description}
-                          </p>
 
                           {/* CTA Button */}
                           <button
@@ -393,41 +363,6 @@ export default function Projets() {
                 </p>
               </div>
 
-              {/* Status and Team Info */}
-              <div className="grid grid-cols-2 gap-1.5 sm:gap-2 md:gap-3 mb-4 sm:mb-5 md:mb-6">
-                <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg sm:rounded-xl p-2 sm:p-2.5 md:p-3 border border-blue-100">
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <div className="bg-blue-600 p-1 sm:p-1.5 rounded">
-                      <UsersIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium uppercase tracking-wide">
-                        Équipe
-                      </p>
-                      <p className="text-xs sm:text-sm md:text-base font-bold text-blue-900">
-                        {selectedProject.teamSize}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-lg sm:rounded-xl p-2 sm:p-2.5 md:p-3 border border-green-100">
-                  <div className="flex items-center gap-1.5 sm:gap-2">
-                    <div className="bg-green-600 p-1 sm:p-1.5 rounded">
-                      <Tag className="w-3 h-3 sm:w-3.5 sm:h-3.5 md:w-4 md:h-4 text-white" />
-                    </div>
-                    <div>
-                      <p className="text-[9px] sm:text-[10px] md:text-xs text-gray-600 font-medium uppercase tracking-wide">
-                        Statut
-                      </p>
-                      <p className="text-xs sm:text-sm md:text-base font-bold text-green-900">
-                        {selectedProject.status}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
               {/* Projet 1: REMIND Sections */}
               {selectedProject.id === 1 && (
                 <>
@@ -442,6 +377,21 @@ export default function Projets() {
                     <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
                       {selectedProject.contexte}
                     </p>
+                  </div>
+
+                  {/* Innovation */}
+                  <div className="mb-4 sm:mb-5 md:mb-6">
+                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                      <SectionIcon icon={Lightbulb} color="bg-yellow-500" />
+                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
+                        Innovation
+                      </h3>
+                    </div>
+                    <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-yellow-200">
+                      <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
+                        {selectedProject.innovation}
+                      </p>
+                    </div>
                   </div>
 
                   {/* Nos solutions cutting-edge */}
@@ -463,61 +413,6 @@ export default function Projets() {
                           </div>
                           <p className="text-gray-700 text-xs sm:text-sm md:text-base flex-1">
                             {solution}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Résultats attendus (3–5 ans) */}
-                  <div className="mb-4 sm:mb-5 md:mb-6">
-                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                      <SectionIcon icon={Target} color="bg-amber-500" />
-                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
-                        Résultats attendus (3–5 ans)
-                      </h3>
-                    </div>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
-                      {selectedProject.resultatsAttendus.map(
-                        (resultat, index) => (
-                          <div
-                            key={index}
-                            className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-lg p-2 sm:p-3 border border-amber-100"
-                          >
-                            <div className="flex items-center gap-2 mb-1">
-                              <div className="w-2 h-2 rounded-full bg-amber-500"></div>
-                              <span className="text-xs sm:text-sm font-semibold text-amber-800">
-                                Objectif {index + 1}
-                              </span>
-                            </div>
-                            <p className="text-gray-700 text-xs sm:text-sm">
-                              {resultat}
-                            </p>
-                          </div>
-                        ),
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Impacts long terme (10+ ans) */}
-                  <div className="mb-4 sm:mb-5 md:mb-6">
-                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                      <SectionIcon icon={Clock} color="bg-purple-500" />
-                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
-                        Impacts long terme (10+ ans)
-                      </h3>
-                    </div>
-                    <div className="space-y-2 sm:space-y-3">
-                      {selectedProject.impactsLongTerme.map((impact, index) => (
-                        <div
-                          key={index}
-                          className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg border border-purple-100"
-                        >
-                          <div className="text-purple-600 font-bold text-sm sm:text-base">
-                            {index + 1}.
-                          </div>
-                          <p className="text-gray-700 text-xs sm:text-sm md:text-base flex-1">
-                            {impact}
                           </p>
                         </div>
                       ))}
@@ -663,22 +558,24 @@ export default function Projets() {
                       ))}
                     </div>
                   </div>
-
-                  {/* Crédit image */}
-                  <div className="mb-4 sm:mb-5">
-                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                      <SectionIcon icon={Droplets} color="bg-gray-600" />
-                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
-                        Crédit image
-                      </h3>
-                    </div>
-                    <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-200">
-                      <p className="text-gray-600 text-xs sm:text-sm">
-                        {selectedProject.creditImage.join(" • ")}
-                      </p>
-                    </div>
-                  </div>
                 </>
+              )}
+
+              {/* Crédit image - Generic for all projects */}
+              {selectedProject.creditImage && selectedProject.creditImage.length > 0 && (
+                <div className="mb-4 sm:mb-5">
+                  <div className="flex items-center gap-2 mb-2 sm:mb-3">
+                    <SectionIcon icon={Droplets} color="bg-gray-600" />
+                    <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
+                      Crédit image
+                    </h3>
+                  </div>
+                  <div className="bg-gray-50 rounded-lg p-2 sm:p-3 border border-gray-200">
+                    <p className="text-gray-600 text-xs sm:text-sm">
+                      {selectedProject.creditImage.join(" • ")}
+                    </p>
+                  </div>
+                </div>
               )}
 
               {/* Image Gallery */}
