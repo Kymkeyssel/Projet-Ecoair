@@ -452,11 +452,11 @@ export default function Projets() {
                           key={index}
                           className="flex items-start gap-2 sm:gap-3 p-2 sm:p-3 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-100"
                         >
-                          <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-br from-green-600 to-emerald-700 rounded-full flex items-center justify-center">
+                          {/* <div className="flex-shrink-0 w-6 h-6 sm:w-7 sm:h-7 bg-gradient-to-br from-green-600 to-emerald-700 rounded-full flex items-center justify-center">
                             <span className="text-white text-xs sm:text-sm font-bold">
                               {index + 1}
                             </span>
-                          </div>
+                          </div> */}
                           <p className="text-gray-700 text-xs sm:text-sm md:text-base flex-1">
                             {voie}
                           </p>
@@ -480,9 +480,9 @@ export default function Projets() {
                             key={index}
                             className="flex items-start gap-2 sm:gap-3"
                           >
-                            <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mt-0.5">
+                            {/* <div className="flex-shrink-0 w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mt-0.5">
                               <CheckIcon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
-                            </div>
+                            </div> */}
                             <p className="text-gray-700 text-xs sm:text-sm md:text-base flex-1">
                               {resultat}
                             </p>
@@ -506,12 +506,12 @@ export default function Projets() {
                           key={index}
                           className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg p-2 sm:p-3 border border-purple-100"
                         >
-                          <div className="flex items-center gap-2 mb-1">
+                          {/* <div className="flex items-center gap-2 mb-1">
                             <div className="w-2 h-2 rounded-full bg-purple-600"></div>
                             <span className="text-xs sm:text-sm font-semibold text-purple-800">
                               Impact {index + 1}
                             </span>
-                          </div>
+                          </div> */}
                           <p className="text-gray-700 text-xs sm:text-sm">
                             {impact}
                           </p>
