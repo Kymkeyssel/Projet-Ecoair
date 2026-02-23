@@ -16,6 +16,7 @@ import {
   Home,
   Droplets,
   Lightbulb,
+  BarChart3,
 } from "lucide-react";
 import BanerImage from "../asset/BG/pexels-photo-371900.webp";
 import img1P1 from "../asset/Projet 1/APDC1776.JPG.jpeg";
@@ -34,8 +35,6 @@ export default function Projets() {
     {
       id: 1,
       number: "01",
-      year: "Annee",
-      category: "Exploitation Minière • Développement Durable",
       title: "REMIND",
       subtitle:
         "Ressources minérales et enjeux d'une exploitation durable sur le plateau Sud Camerounais",
@@ -63,8 +62,6 @@ export default function Projets() {
     {
       id: 2,
       number: "02",
-      year: "--annee--",
-      category: "--categorie--",
       title: "RegoRisk",
       subtitle:
         "Science, gouvernance et communautés pour refonder la chaîne de prévention des glissements de terrain et des pertes de terres à l'Ouest Cameroun",
@@ -333,11 +330,6 @@ export default function Projets() {
                       {selectedProject.number}
                     </span>
                   </div>
-                  <div>
-                    <p className="text-white/90 text-[10px] sm:text-xs md:text-sm font-medium">
-                      {selectedProject.year} • {selectedProject.category}
-                    </p>
-                  </div>
                 </div>
                 <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold text-white mb-1">
                   {selectedProject.title}
@@ -352,12 +344,6 @@ export default function Projets() {
             <div className="p-3 sm:p-4 md:p-5 lg:p-6">
               {/* Project Overview */}
               <div className="mb-4 sm:mb-5 md:mb-6">
-                <div className="flex items-center gap-2 mb-3 sm:mb-4">
-                  <div className="w-1 h-4 sm:h-5 md:h-6 bg-gradient-to-b from-blue-600 to-indigo-600 rounded-full"></div>
-                  <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
-                    Aperçu du Projet
-                  </h3>
-                </div>
                 <p className="text-gray-700 leading-relaxed text-xs sm:text-sm md:text-base">
                   {selectedProject.detailedDescription}
                 </p>
@@ -377,21 +363,6 @@ export default function Projets() {
                     <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
                       {selectedProject.contexte}
                     </p>
-                  </div>
-
-                  {/* Innovation */}
-                  <div className="mb-4 sm:mb-5 md:mb-6">
-                    <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                      <SectionIcon icon={Lightbulb} color="bg-yellow-500" />
-                      <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
-                        Innovation
-                      </h3>
-                    </div>
-                    <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-yellow-200">
-                      <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
-                        {selectedProject.innovation}
-                      </p>
-                    </div>
                   </div>
 
                   {/* Nos solutions cutting-edge */}
@@ -419,28 +390,18 @@ export default function Projets() {
                     </div>
                   </div>
 
-                  {/* Bon à savoir */}
+                  {/* Innovation */}
                   <div className="mb-4 sm:mb-5 md:mb-6">
                     <div className="flex items-center gap-2 mb-2 sm:mb-3">
-                      <SectionIcon icon={Info} color="bg-teal-500" />
+                      <SectionIcon icon={Lightbulb} color="bg-yellow-500" />
                       <h3 className="text-sm sm:text-base md:text-lg font-bold text-gray-900">
-                        Bon à savoir
+                        Innovation
                       </h3>
                     </div>
-                    <div className="bg-gradient-to-br from-teal-50 to-cyan-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-teal-200">
-                      <div className="space-y-2 sm:space-y-3">
-                        {selectedProject.bonASavoir.map((info, index) => (
-                          <div
-                            key={index}
-                            className="flex items-start gap-2 sm:gap-3"
-                          >
-                            <div className="text-teal-600 mt-0.5">•</div>
-                            <p className="text-gray-700 text-xs sm:text-sm md:text-base flex-1">
-                              {info}
-                            </p>
-                          </div>
-                        ))}
-                      </div>
+                    <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-lg sm:rounded-xl p-3 sm:p-4 border border-yellow-200">
+                      <p className="text-gray-700 text-xs sm:text-sm md:text-base leading-relaxed">
+                        {selectedProject.innovation}
+                      </p>
                     </div>
                   </div>
                 </>

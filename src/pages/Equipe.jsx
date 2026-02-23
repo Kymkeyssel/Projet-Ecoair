@@ -26,6 +26,8 @@ import Drdjoumessi3 from "../asset/ImagesEquipe/Mme Djoumessi/IMG_20190329_11441
 import DrStephane from "../asset/ImagesEquipe/Dr Stephane/img1.jpeg";
 import imgVanelle from "../asset/ImagesEquipe/ZEBAZE Vanelle/imgVanelle1.jpeg";
 import DrFranca from "../asset/ImagesEquipe/Dr Franca/imgDrFranca1.jpeg";
+import DrFranca2 from "../asset/ImagesEquipe/Dr Franca/imgDrFranca2.jpeg";
+import DrFranca3 from "../asset/ImagesEquipe/Dr Franca/imgDrFranca3.jpeg";
 import DrJoseph from "../asset/ImagesEquipe/Dr Joseph/JO2.jpeg";
 import DrJoseph2 from "../asset/ImagesEquipe/Dr Joseph/JO1.jpeg";
 import DrJoseph3 from "../asset/ImagesEquipe/Dr Joseph/JO3.jpeg";
@@ -63,6 +65,26 @@ function App() {
     },
     {
       id: 2,
+      name: "Dr Gladys Djoumessi",
+      role: "Coordonnatrice de Programme",
+      description: "Sciences spatiales et gestion des paysages.",
+      image: Drdjoumessi,
+      imageStyle: {
+        scale: 1.05,
+        objectPosition: "35% center",
+      },
+
+      gallery: [Drdjoumessi, Drdjoumessi2, Drdjoumessi3],
+      fullBio:
+        "Gladys est spécialiste en sciences spatiales. Elle applique les outils de cartographie, systèmes d'information géographique (SIG) et de télédétection aux domaines de la foresterie, de la gestion des paysages et des ressources naturelles.",
+      mission:
+        "Son travail s'inscrit dans une approche intégrée visant à concilier la préservation des écosystèmes avec les besoins croissants des populations. Elle a travaillé au sein d'organisation internationale, notamment le Centre de Recherche Forestière Internationale et le Centre International de recherche en Agroforesterie (CIFOR-ICRAF). Sa mission au sein d'EcoAir s'adosse au programme « climat, forêt et résilience ». Ses travaux portent sur l'analyse multi-temporelle du territoire et l'identification des zones prioritaires pour la conservation.",
+      email: "gguimkeu@ecoair-cm.org",
+      phone: "+237 6XX XXX XXX",
+      location: "Yaoundé, Cameroun",
+    },
+    {
+      id: 3,
       name: "Dr Elida Joelle Yemeli",
       role: "Coordonnatrice de Programme",
       description:
@@ -95,26 +117,6 @@ function App() {
       mission:
         "Elle met son expertise scientifique au service de la gestion intégrée des ressources hydriques, de l’évaluation environnementale et de la planification durable des territoires. Elle possède une expérience internationale en analyse et gestion environnementale acquise au ministère des Affaires municipales et de l’Habitation du Québec (MAMH), où elle a contribué à la Stratégie québécoise d’économie d’eau potable. Au Cameroun, elle a coordonné au sein de l’ONG CECOSDA des projets axés sur l’énergie verte et la résilience climatique. Sa mission au sein du programme EcoAir Eau, assainissement et santé environnementale est de promouvoir une gestion durable et équitable des ressources hydriques à travers l’analyse des impacts, la planification participative et le développement de solutions innovantes favorisant la santé et le bien-être des communautés.",
       email: "eyemele@ecoiar-cm.org",
-      phone: "+237 6XX XXX XXX",
-      location: "Yaoundé, Cameroun",
-    },
-    {
-      id: 3,
-      name: "Dr Gladys Djoumessi",
-      role: "Coordonnatrice de Programme",
-      description: "Sciences spatiales et gestion des paysages.",
-      image: Drdjoumessi,
-      imageStyle: {
-        scale: 1.05,
-        objectPosition: "35% center",
-      },
-
-      gallery: [Drdjoumessi, Drdjoumessi2, Drdjoumessi3],
-      fullBio:
-        "Gladys est spécialiste en sciences spatiales. Elle applique les outils de cartographie, systèmes d'information géographique (SIG) et de télédétection aux domaines de la foresterie, de la gestion des paysages et des ressources naturelles.",
-      mission:
-        "Son travail s'inscrit dans une approche intégrée visant à concilier la préservation des écosystèmes avec les besoins croissants des populations. Elle a travaillé au sein d'organisation internationale, notamment le Centre de Recherche Forestière Internationale et le Centre International de recherche en Agroforesterie (CIFOR-ICRAF). Sa mission au sein d'EcoAir s'adosse au programme « climat, forêt et résilience ». Ses travaux portent sur l'analyse multi-temporelle du territoire et l'identification des zones prioritaires pour la conservation.",
-      email: "gguimkeu@ecoair-cm.org",
       phone: "+237 6XX XXX XXX",
       location: "Yaoundé, Cameroun",
     },
@@ -161,8 +163,8 @@ function App() {
       image: DrFranca,
       gallery: [
         DrFranca,
-        // "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
-        // "https://images.pexels.com/photos/3184470/pexels-photo-3184470.jpeg?auto=compress&cs=tinysrgb&w=600",
+        DrFranca2,
+        DrFranca3,
       ],
       fullBio: "Franca Mboujda, spécialiste en agroforesterie et gestion des ressources naturelles, est chercheuse et praticienne du développement durable dans la coopération internationale. Formée à l’Université de Dschang (Cameroun) puis à l’IRD de Montpellier, elle a d’abord orienté ses recherches vers l’écologie, l’agroforesterie, la biologie et la gestion durable des ressources forestières. Son parcours s’est ensuite enrichi d’une dimension anthropologique à l’Université Paul-Valéry Montpellier III, où elle a approfondi sa compréhension des interactions entre l’Homme, la société et l’environnement. Avec près de dix années d’expérience, elle a développé une expertise en recherche appliquée, en évaluation de projets et en accompagnement des organisations de la société civile. Elle intervient également dans la conception et l’analyse de politiques publiques intégrant les dimensions de genre, de climat, de savoirs locaux. Avec plusieurs projets en Afrique et Europe, son parcours l’a amenée à collaborer avec des ONG, des universités et des institutions de recherche (IRD, CEFE, Université de Bordeaux).",
       mission: "Son rôle au sein d’EcoAir s’adosse aux axes « Climat, forêt & résilience » et « Mobilisation communautaire ». Elle articule les savoirs scientifiques, les méthodes de recherche-action et les pratiques locales, notamment dans des contextes de précarité ou de marginalisation. Elle travaille à la structuration de projets communautaires, l’organisation d’ateliers participatifs et au développement d’outils de capitalisation et de communication scientifique.  Elle met à profil ses compétences en analyse qualitative et quantitative, évaluation, plaidoyer et animation multi-acteurs, et apporte un regard sensible et contextualisé sur les enjeux globaux actuels.",
