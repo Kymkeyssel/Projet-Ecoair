@@ -16,7 +16,7 @@ import {
   X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import BanerImage from "../asset/BG/pexels-photo-371900.webp";
+import BanerImage from "../asset/BG/Baner@0,75x.jpg";
 
 export default function APropos({ scrollToSection }) {
   // État pour gérer les sections dépliables globales (Atouts, Objectifs)
@@ -103,7 +103,7 @@ export default function APropos({ scrollToSection }) {
             alt="Notre Équipe"
             className="w-full h-full object-cover"
             style={{
-              objectPosition: "30% 80%", // 50% centre horizontal, 20% monte l'image
+              objectPosition: "30% 50%", // 50% centre horizontal, 20% monte l'image
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />

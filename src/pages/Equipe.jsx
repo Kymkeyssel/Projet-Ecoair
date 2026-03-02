@@ -13,7 +13,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import BanerImage from "../asset/BG/pexels-photo-371900.webp";
+import BanerImage from "../asset/BG/Baner@0,75x.jpg";
 import DrmomoImage from "../asset/ImagesEquipe/Dr MOMO/thumbnail_DSC_0433.jpg";
 import DrElida from "../asset/ImagesEquipe/Dr Elida/IMG_20200131_101535.jpg";
 import drmomo2 from "../asset/ImagesEquipe/Dr MOMO/thumbnail_DSC_0372.jpg";
@@ -32,6 +32,8 @@ import DrJoseph from "../asset/ImagesEquipe/Dr Joseph/JO2.jpeg";
 import DrJoseph2 from "../asset/ImagesEquipe/Dr Joseph/JO1.jpeg";
 import DrJoseph3 from "../asset/ImagesEquipe/Dr Joseph/JO3.jpeg";
 import DrYemefack from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack1.jpeg";
+import DrYemefack2 from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack2.jpeg";
+// import DrYemefack3 from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack3.jpeg";
 import Keyssel from "../asset/ImagesEquipe/YMELE Keyssel/kymimg1.jpeg";
 
 
@@ -146,7 +148,7 @@ function App() {
       image: DrYemefack,
       gallery: [
         DrYemefack,
-        // "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=600",
+        DrYemefack2,
         // "https://images.pexels.com/photos/3184470/pexels-photo-3184470.jpeg?auto=compress&cs=tinysrgb&w=600",
       ],
       fullBio: "Martin Yemefack applique des approches quantitatives robustes et des outils de télédétection, SIG et modélisation numérique à l’étude de la dynamique des sols, des usages des terres et de leurs interactions avec les systèmes agricoles tropicaux. Martin a une longue expérience (plus de 25 ans) en recherche pour le développement, notamment à l’Institut de Recherches Agricoles pour le Développement (IRAD), et travaille comme visiting scientist à l’International Institute of Tropical Agriculture (IITA). Il a également occupé des fonctions de coordination de la recherche nationale au Ministère de la Recherche Scientifique et de l’Innovation du Cameroun, et Président de l’African Soil Science Society (ASSS).",
@@ -226,7 +228,7 @@ function App() {
         "Keyssel est Responsable Digital & Développeur Web au sein d’EcoAir. Il conçoit et maintient les plateformes web, développe des outils numériques internes et réalise les supports graphiques destinés aux réseaux sociaux. Il assure également le support logiciel et technique auprès des équipes. Passionné par les solutions digitales, il met ses compétences en programmation et en communication visuelle au service de la visibilité et de l’efficacité opérationnelle d’EcoAir. ",
       mission:
         "Keyssel veille à la qualité des contenus visuels et à la cohérence de la communication digitale. Son objectif est de renforcer la présence en ligne d’EcoAir et de soutenir les équipes dans leurs besoins technologiques quotidiens.",
-      email: "Kymele@ecoair-cm.org",
+      email: "ymele_k@ecoair-cm.org",
       phone: "+237 6 56 17 14 42",
       location: "Yaoundé, Cameroun",
     },
@@ -310,7 +312,7 @@ function App() {
             alt="Notre Équipe"
             className="w-full h-full object-cover"
             style={{
-              objectPosition: "30% 80%",
+              objectPosition: "30% 50%",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />
@@ -519,9 +521,12 @@ function App() {
                     <Mail className="w-4 h-4 text-green-600 mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-xs text-gray-600">Email</p>
-                      <p className="text-gray-900 text-[12px] font-medium">
+                      <a
+                        href={`mailto:${selectedMember.email}`}
+                        className="text-gray-900 text-[12px] font-medium hover:text-green-600 transition-colors block"
+                      >
                         {selectedMember.email}
-                      </p>
+                      </a>
                     </div>
                   </div>
 

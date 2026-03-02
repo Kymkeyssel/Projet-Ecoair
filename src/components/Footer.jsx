@@ -76,11 +76,21 @@ export default function Footer({ onNavigate }) {
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-green-400 flex-shrink-0" />
-                <p className="text-gray-300">contact@ecoair.cm</p>
+                <a 
+                  href="mailto:Contact@ecoair-cm.org" 
+                  className="text-gray-300 hover:text-green-400 transition-colors"
+                >
+                  Contact@ecoair-cm.org
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-green-400 flex-shrink-0" />
-                <p className="text-gray-300">+237 6 76 97 80 90</p>
+                <a 
+                  href="tel:+237676978090" 
+                  className="text-gray-300 hover:text-green-400 transition-colors"
+                >
+                  +237 6 76 97 80 90
+                </a>
               </div>
             </div>
           </div>

@@ -9,7 +9,9 @@ import {
   Clock,
 } from "lucide-react";
 import { useTranslation } from "react-i18next";
-import BanerImage from "../asset/BG/pexels-photo-371900.webp";
+import emailjs from "@emailjs/browser";
+import { toast } from "sonner";
+import BanerImage from "../asset/BG/Baner@0,75x.jpg";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Contact() {
@@ -22,16 +24,15 @@ export default function Contact() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState("idle");
-  const [contactMethod, setContactMethod] = useState("email");
+  const [contactMethod, setContactMethod] = useState("whatsapp");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    if (contactMethod === "whatsapp") {
-      const { name, contact, subject, message } = formData;
+    const { name, contact, subject, message } = formData;
 
+    if (contactMethod === "whatsapp") {
       const whatsappMessage = `
     *Nouveau message EcoAir*  
     ──────────────
@@ -46,28 +47,39 @@ export default function Contact() {
       `;
 
       window.open(
-        `https://wa.me/237676978090?text=${encodeURIComponent(
-          whatsappMessage,
-        )}`,
-        "_blank",
+        `https://wa.me/237676978090?text=${encodeURIComponent(whatsappMessage)}`,
+        "_blank"
       );
 
       setIsSubmitting(false);
-      setSubmitStatus("success");
+      toast.success("Redirection vers WhatsApp...");
       setFormData({ name: "", contact: "", subject: "", message: "" });
-      setTimeout(() => setSubmitStatus("idle"), 5000);
       return;
     }
 
-    // Simule l'envoi email (à remplacer par votre logique réelle)
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus("success");
+    // Version EmailJS
+    try {
+      await emailjs.send(
+        "service_riztpqt",
+        "template_i2ke7ol",
+        {
+          from_name: name,
+          contact_info: contact,
+          subject: subject,
+          message: message,
+          to_email: "program@ecoair-cm.org",
+        },
+        "azY2-lnYLqnhSFQVl"
+      );
+
+      toast.success("Message envoyé avec succès !");
       setFormData({ name: "", contact: "", subject: "", message: "" });
-      setTimeout(() => {
-        setSubmitStatus("idle");
-      }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      toast.error("Une erreur est survenue lors de l'envoi du message.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -100,7 +112,7 @@ export default function Contact() {
             alt="Notre Équipe"
             className="w-full h-full object-cover"
             style={{
-              objectPosition: "30% 80%", // 50% centre horizontal, 20% monte l'image
+              objectPosition: "30% 50%", // 50% centre horizontal, 20% monte l'image
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />
@@ -154,9 +166,9 @@ export default function Contact() {
                     </div>
                     <h3 className="font-bold text-gray-800">Téléphone</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <a href="tel:+237676978090" className="text-gray-600 text-sm leading-relaxed hover:text-green-600 transition-colors">
                     +237 6 76 97 80 90
-                  </p>
+                  </a>
                 </div>
 
                 {/* Email */}
@@ -167,9 +179,10 @@ export default function Contact() {
                     </div>
                     <h3 className="font-bold text-gray-800">Email</h3>
                   </div>
-                  <p className="text-gray-600 text-sm leading-relaxed">
-                    contact@ecoair.cm <br /> info@ecoair.cm
-                  </p>
+                  <div className="text-gray-600 text-sm leading-relaxed flex flex-col">
+                    <a href="mailto:Contact@ecoair-cm.org" className="hover:text-green-600 transition-colors w-fit">Contact@ecoair-cm.org</a>
+                    <a href="mailto:info@ecoair-cm.org" className="hover:text-green-600 transition-colors w-fit">info@ecoair-cm.org</a>
+                  </div>
                 </div>
 
                 {/* Horaires */}
@@ -203,22 +216,6 @@ export default function Contact() {
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">
                   Envoyez-nous un Message
                 </h2>
-
-                {submitStatus === "success" && (
-                  <div className="mb-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-2xl">
-                    <p className="font-semibold">Message envoyé avec succès!</p>
-                    <p className="text-sm">
-                      Nous vous répondrons dans les plus brefs délais.
-                    </p>
-                  </div>
-                )}
-
-                {submitStatus === "error" && (
-                  <div className="mb-6 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-2xl">
-                    <p className="font-semibold">Erreur lors de l'envoi</p>
-                    <p className="text-sm">Veuillez réessayer plus tard.</p>
-                  </div>
-                )}
 
                 <form
                   onSubmit={handleSubmit}
@@ -259,12 +256,9 @@ export default function Contact() {
                       <div className="flex items-center gap-1 bg-gray-50 p-1 rounded-full border border-gray-200">
                         <button
                           type="button"
-                          onClick={() => setContactMethod("email")}
-                          className={`px-3 py-1 text-xs font-medium rounded-full transition-all ${
-                            contactMethod === "email"
-                              ? "bg-white shadow text-green-600"
-                              : "text-gray-500 hover:text-green-600"
-                          }`}
+                          disabled
+                          title="Bientôt disponible"
+                          className="px-3 py-1 text-xs font-medium rounded-full transition-all text-gray-400 cursor-not-allowed opacity-50"
                         >
                           Email
                         </button>

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import BanerImage from "../asset/BG/pexels-photo-371900.webp";
+import BanerImage from "../asset/BG/Baner@0,75x.jpg";
 import LogoEcocaf from "../asset/Logo Partenaire/ecocaf.jpeg";
 import LogoMej from "../asset/Logo Partenaire/logo-mej.png";
 import LogoShiftGeoServices from "../asset/Logo Partenaire/Shift.jpeg";
@@ -63,7 +63,7 @@ export default function PartenairesAffiliations() {
             alt="Nos Partenaires"
             className="w-full h-full object-cover"
             style={{
-              objectPosition: "30% 80%",
+              objectPosition: "30% 50%",
             }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />

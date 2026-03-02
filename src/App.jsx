@@ -10,6 +10,7 @@ import Contact from "./pages/Contact";
 import Publications from "./pages/Publications";
 import PartenairesAffiliations from "./pages/PartenairesAffiliations";
 import "./i18n"; // Importez votre configuration ici
+import { Toaster } from "sonner";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("accueil");
@@ -69,6 +70,7 @@ function App() {
       />
       <main>{renderPage()}</main>
       <Footer onNavigate={setCurrentPage} />
+      <Toaster position="top-right" richColors />
     </div>
   );
 }

@@ -18,7 +18,7 @@ import {
   Lightbulb,
   BarChart3,
 } from "lucide-react";
-import BanerImage from "../asset/BG/pexels-photo-371900.webp";
+import BanerImage from "../asset/BG/Baner@0,75x.jpg";
 import img1P1 from "../asset/Projet 1/APDC1776.JPG.jpeg";
 import img2P1 from "../asset/Projet 1/CIMG1195.JPG.jpeg";
 import img3P1 from "../asset/Projet 1/IMG_20210322_154238.jpg.jpeg";
@@ -133,15 +133,15 @@ export default function Projets() {
       >
         {" "}
         <div className="absolute inset-0">
-          <img
-            src={BanerImage}
-            alt="Nos Projets"
-            className="w-full h-full object-cover"
-            style={{
-              objectPosition: "30% 80%",
-            }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />
+          <div className="w-full h-full overflow-hidden">
+  <img
+    src={BanerImage}
+    alt="Nos Projets"
+    className="w-full h-full object-cover"
+    style={{ objectPosition: "30% 50%" }}
+  />
+</div>
+          <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/10" />
         </div>
         <div className="relative z-10 max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 px-2">
           <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-5xl font-bold text-gray-100 mb-1 sm:mb-2 md:mb-4 text-center">
