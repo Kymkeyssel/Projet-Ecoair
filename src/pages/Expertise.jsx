@@ -130,54 +130,6 @@ export default function Expertise() {
                
               </div>
             </motion.section>
-      {/* Hero Section */}
-      {/* <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8 }}
-        className="relative min-h-[40vh] md:min-h-[50vh] text-white overflow-hidden rounded-3xl shadow-2xl mb-8 mx-4 mt-20"
-      >
-        <div className="absolute inset-0">
-          <img
-            src={BanerImage}
-            alt="Expertise EcoAir"
-            className="w-full h-full object-cover"
-            style={{ objectPosition: "50% 40%" }}
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-green-700/80 via-green-600/70 to-emerald-800/60" />
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{
-              backgroundImage: `linear-gradient(rgba(16, 185, 129, 0.1) 1px, transparent 1px),
-                               linear-gradient(90deg, rgba(16, 185, 129, 0.1) 1px, transparent 1px)`,
-              backgroundSize: '50px 50px'
-            }}
-          />
-        </div>
-        
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-[40vh] md:min-h-[50vh] px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Sparkles className="w-6 h-6 text-emerald-300" />
-              <span className="text-emerald-200 font-medium tracking-wider uppercase text-sm">Expertise</span>
-              <Sparkles className="w-6 h-6 text-emerald-300" />
-            </div>
-            <h1 className="text-3xl md:text-5xl lg:text-6xl text-white mb-4 tracking-tight" style={{ fontFamily: 'Sniglet, cursive' }}>
-              Notre <span className="text-emerald-300">Expertise</span>
-            </h1>
-            <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto">
-              Un capital scientifique rigoureux au service de solutions innovantes
-            </p>
-          </motion.div>
-        </div>
-
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-green-900 to-transparent" />
-      </motion.section> */}
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 pb-16">
@@ -228,7 +180,7 @@ export default function Expertise() {
                   <Globe className="w-5 h-5 text-green-600" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-                  Projets nationaux et internationaux
+                  Projets nationaux et internationaux.
                 </h2>
               </div>
 
@@ -272,7 +224,7 @@ export default function Expertise() {
                   <Building2 className="w-5 h-5 text-cyan-600" />
                 </div>
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-                  Organisations
+                  Organisations dans lesquelles les membres ont exercé.
                 </h2>
               </div>
 
