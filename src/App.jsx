@@ -9,6 +9,7 @@ import Projets from "./pages/Projets";
 import Contact from "./pages/Contact";
 import Publications from "./pages/Publications";
 import PartenairesAffiliations from "./pages/PartenairesAffiliations";
+import Expertise from "./pages/Expertise";
 import "./i18n"; // Importez votre configuration ici
 import { Toaster } from "sonner";
 
@@ -31,6 +32,8 @@ function App() {
             return <Equipe />;
           case "projets":
             return <Projets />;
+          case "expertise":
+            return <Expertise />;
           default:
             return <Equipe />;
         }
@@ -55,6 +58,8 @@ function App() {
         return <Projets />;
       case "contact":
         return <Contact />;
+      case "expertise":
+        return <Expertise />;
       default:
         return <Accueil onNavigate={setCurrentPage} />;
     }

@@ -143,9 +143,9 @@ export default function Projets() {
 </div>
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/10" />
         </div>
-        <div className="relative z-10 max-w-7xl mx-auto mt-8 sm:mt-12 md:mt-16 px-2">
-          <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-5xl font-bold text-gray-100 mb-1 sm:mb-2 md:mb-4 text-center">
-            Nos Projets
+       <div className="relative z-10 mx-auto mt-16 text-center max-w-3xl px-4">
+          <h1 className="text-3xl sm:text-2xl md:text-5xl text-gray-200 mb-12" style={{ fontFamily: 'Sniglet, cursive' }}>
+            Nos <span className="text-emerald-300">Projets</span>
           </h1>
         </div>
       </motion.section>

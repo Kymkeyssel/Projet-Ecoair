@@ -69,8 +69,8 @@ export default function PartenairesAffiliations() {
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />
         </div>
         <div className="relative z-10 mx-auto mt-16 text-center max-w-3xl px-4">
-          <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-200 mb-4">
-            {t("nav.partners", "Nos Partenaires")}
+          <h1 className="text-3xl sm:text-2xl md:text-5xl  text-gray-200 mb-12" style={{ fontFamily: 'Sniglet, cursive' }}>
+            Nos <span className="text-emerald-300">Partenaires</span>
           </h1>
         </div>
       </motion.section>

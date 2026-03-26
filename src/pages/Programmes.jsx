@@ -122,7 +122,7 @@ export default function Programmes() {
       py-6 sm:py-10 md:py-16 px-4 animate-fade-in animate-delay-100"
       >
         <div className="max-w-7xl mx-auto mt-10 sm:mt-10">
-          <h1 className="text-xl sm:text-3xl md:text-5xl text-gray-200 font-bold mb-2 sm:mb-4">
+          <h1 className="text-xl sm:text-3xl md:text-5xl text-gray-200 font-bold mb-2 sm:mb-4" style={{ fontFamily: 'Sniglet, cursive' }}>
             {t(" Nos Programmes")}
           </h1>
           <p className="text-xs sm:text-base md:text-lg text-green-200 max-w-3xl mt-2">

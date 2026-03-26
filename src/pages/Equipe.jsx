@@ -24,7 +24,7 @@ import Drdjoumessi from "../asset/ImagesEquipe/Mme Djoumessi/IMG-20220326-WA0000
 import Drdjoumessi2 from "../asset/ImagesEquipe/Mme Djoumessi/IMG_20190525_161919_5.jpg";
 import Drdjoumessi3 from "../asset/ImagesEquipe/Mme Djoumessi/IMG_20190329_114414_8.jpg";
 import DrStephane from "../asset/ImagesEquipe/Dr Stephane/img1.jpeg";
-import imgVanelle from "../asset/ImagesEquipe/ZEBAZE Vanelle/imgVanelle1.jpeg";
+import imgVanelle from "../asset/ImagesEquipe/ZEBAZE Vanelle/imgVanelle.jpeg";
 import DrFranca from "../asset/ImagesEquipe/Dr Franca/imgDrFranca1.jpeg";
 import DrFranca2 from "../asset/ImagesEquipe/Dr Franca/imgDrFranca2.jpeg";
 import DrFranca3 from "../asset/ImagesEquipe/Dr Franca/imgDrFranca3.jpeg";
@@ -32,7 +32,7 @@ import DrJoseph from "../asset/ImagesEquipe/Dr Joseph/JO2.jpeg";
 import DrJoseph2 from "../asset/ImagesEquipe/Dr Joseph/JO1.jpeg";
 import DrJoseph3 from "../asset/ImagesEquipe/Dr Joseph/JO3.jpeg";
 import DrYemefack from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack1.jpeg";
-import DrYemefack2 from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack2.jpeg";
+// import DrYemefack2 from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack2.jpeg";
 // import DrYemefack3 from "../asset/ImagesEquipe/Dr YEMEFACK/ImgDrYemefack3.jpeg";
 import Keyssel from "../asset/ImagesEquipe/YMELE Keyssel/kymimg1.jpeg";
 
@@ -125,7 +125,7 @@ function App() {
     {
       id: 4,
       name: "Dr Stéphane Momo Takoudjou",
-      role: "Coordonnateur de Programme",
+      role: "Conseiller",
       description: "Ecologie tropicale et photogrametrie",
       image:
         DrStephane,
@@ -148,7 +148,6 @@ function App() {
       image: DrYemefack,
       gallery: [
         DrYemefack,
-        DrYemefack2,
         // "https://images.pexels.com/photos/3184470/pexels-photo-3184470.jpeg?auto=compress&cs=tinysrgb&w=600",
       ],
       fullBio: "Martin Yemefack applique des approches quantitatives robustes et des outils de télédétection, SIG et modélisation numérique à l’étude de la dynamique des sols, des usages des terres et de leurs interactions avec les systèmes agricoles tropicaux. Martin a une longue expérience (plus de 25 ans) en recherche pour le développement, notamment à l’Institut de Recherches Agricoles pour le Développement (IRAD), et travaille comme visiting scientist à l’International Institute of Tropical Agriculture (IITA). Il a également occupé des fonctions de coordination de la recherche nationale au Ministère de la Recherche Scientifique et de l’Innovation du Cameroun, et Président de l’African Soil Science Society (ASSS).",
@@ -318,8 +317,8 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-r from-green-700/30 to-amber-700/30" />
         </div>
         <div className="relative z-10 mx-auto mt-16 text-center max-w-3xl px-4">
-          <h1 className="text-xl sm:text-2xl md:text-5xl font-bold text-gray-200 mb-4">
-            {t("Notre Equipe")}
+          <h1 className="text-3xl sm:text-2xl md:text-5xl text-gray-200 mb-12" style={{ fontFamily: 'Sniglet, cursive' }}>
+            Notre <span className="text-emerald-300">Équipe</span>
           </h1>
         </div>
       </motion.section>

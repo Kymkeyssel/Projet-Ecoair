@@ -119,6 +119,7 @@ export default function Navbar({
       submenu: [
         { id: "equipe", label: t("nav.team", "Équipes"), page: "equipe" },
         { id: "projets", label: t("nav.projects", "Projets"), page: "projets" },
+        { id: "expertise", label: t("nav.expertise", "Expertise"), page: "expertise" },
       ],
     },
     {
@@ -218,7 +219,7 @@ export default function Navbar({
         onClick={() => onNavigate("accueil")}
       >
         <motion.h1
-          className="text-2xl lg:text-5xl font-extrabold"
+          className="text-4xl lg:text-5xl"
           animate={{
             color: scrolled ? "#10b981" : "white",
             scale: 1,
@@ -228,13 +229,14 @@ export default function Navbar({
             duration: 0.5,
             ease: "easeInOut",
           }}
+           style={{ fontFamily: 'Sniglet, cursive' }}
         >
           EcoAir
         </motion.h1>
       </div>
 
       {/* Navbar Desktop */}
-      <nav ref={navRef} className={navClasses}>
+      <nav ref={navRef} className={navClasses} >
         {navItems.map((item) => (
           <div key={item.id} className="relative">
             <button
@@ -242,16 +244,16 @@ export default function Navbar({
                 e.stopPropagation();
                 handleDesktopItemClick(item);
               }}
-              className={`flex items-center text-sm font-medium transition-colors ${
+              className={`flex items-center text-sm transition-colors ${
                 isItemActive(item.id)
                   ? item.id === "contact"
-                    ? "bg-green-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:bg-green-600"
-                    : "text-green-300 border-b-2 border-green-400 pb-1 font-semibold"
+                    ? "bg-green-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-green-600"
+                    : "text-green-300 border-b-2 border-green-400 pb-1 "
                   : item.id === "contact"
-                    ? "bg-green-500/80 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:bg-green-600"
+                    ? "bg-green-500/80 text-white px-4 py-2 rounded-full  shadow-lg hover:bg-green-600"
                     : "text-white hover:text-green-300"
               } ${item.id === "contact" ? "mx-2" : ""}`}
-            >
+            style={{ fontFamily: 'Sniglet, cursive' }}>
               {item.label}
               {item.submenu && (
                 <ChevronDown
@@ -273,7 +275,7 @@ export default function Navbar({
                           handleDesktopSubItemClick(item.id, subItem);
                         }}
                         className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-green-500 hover:text-green-200 transition-colors"
-                      >
+                      style={{ fontFamily: 'Sniglet, cursive' }}>
                         {subItem.label}
                       </button>
                     </li>
