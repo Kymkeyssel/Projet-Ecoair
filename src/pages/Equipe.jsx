@@ -11,6 +11,7 @@ import {
   MapPin,
   ChevronLeft,
   ChevronRight,
+  Info,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import BanerImage from "../asset/BG/Baner@0,75x.jpg";
@@ -41,6 +42,7 @@ function App() {
   const [selectedMember, setSelectedMember] = useState(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [fade, setFade] = useState(false);
+  const [showHint, setShowHint] = useState(true);
   const { t } = useTranslation();
 
   const teamMembers = [
@@ -285,6 +287,15 @@ function App() {
     return () => clearInterval(interval);
   }, [selectedMember]);
 
+  useEffect(() => {
+    const handleScroll = () => setShowHint(false);
+    const container = document.querySelector('.scrollbar-hide');
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   const currentGalleryItem = selectedMember?.gallery?.[currentImageIndex];
 
   const currentImageSrc =
@@ -349,7 +360,10 @@ function App() {
                 viewport={{ once: false, amount: 0.6 }}
                 transition={{ duration: 0.4 }}
                 className="group relative bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer flex-shrink-0 w-[75%] sm:w-[350px] snap-center lg:w-[calc(20%-24px)] lg:flex-shrink lg:min-w-[250px] max-w-[340px] xl:max-w-none"
-                onClick={() => handleOpenModal(member)}
+                onClick={() => {
+                  handleOpenModal(member);
+                  setShowHint(false);
+                }}
               >
                 <div className="aspect-[6/10] overflow-hidden">
                   <img
@@ -365,8 +379,8 @@ function App() {
                 </div>
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/100 via-black/20 to-transparent flex flex-col justify-end p-2">
-                  {/* Flèche */}
-                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {/* Flèche toujours visible sur mobile */}
+                  <div className="absolute top-4 right-4 bg-white/20 backdrop-blur-sm rounded-full p-2 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
                     <ArrowRight className="w-5 h-5 text-white" />
                   </div>
 
@@ -382,6 +396,12 @@ function App() {
                     <p className="text-gray-300 text-sm mb-4 hidden md:block">
                       {member.description}
                     </p>
+
+                    {/* Indicateur "Appuyer pour plus d'infos" - visible uniquement sur mobile */}
+                    <div className="flex items-center gap-1 text-white/80 text-[10px] mb-2 lg:hidden">
+                      <Info className="w-3 h-3" />
+                      <span>Appuyer pour plus d'infos</span>
+                    </div>
 
                     <div className="flex gap-4 hidden md:block">
                       {/* <button className="bg-white/20 backdrop-blur-sm hover:bg-white/30 rounded-full p-2 transition-colors mr-2">
@@ -399,6 +419,15 @@ function App() {
               </motion.div>
             ))}
           </div>
+
+          {/* Indicateur swipe pour mobile */}
+          {showHint && (
+            <div className="lg:hidden mb-4 flex items-center justify-center gap-2">
+              <ChevronLeft className="w-4 h-4 text-green-600 animate-pulse" />
+              <span className="text-sm text-gray-600 font-medium">Balayer →</span>
+              <ChevronRight className="w-4 h-4 text-green-600 animate-pulse" />
+            </div>
+          )}
         </motion.div>
       </div>
 
